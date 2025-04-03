@@ -30,6 +30,7 @@ Chart.register(CategoryScale);
   providers:[DatePipe]
 })// dashboard.component.ts
 export class DashboardComponent {
+  
   statsData: any = {};
   workouts: any[] = [];
   activities: any[] = [];
@@ -62,7 +63,6 @@ export class DashboardComponent {
       this.activities = res.activities || [];
       console.log('Workouts:', this.workouts, 'Activities:', this.activities);
 
-      // Delay execution to ensure ViewChild elements are initialized
       setTimeout(() => {
         this.createLineChart();
       }, 500);
@@ -84,7 +84,6 @@ export class DashboardComponent {
       return;
     }
 
-    // Destroy existing charts before creating new ones
     if (this.workoutChart) {
       this.workoutChart.destroy();
     }
