@@ -1,0 +1,93 @@
+.custom-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+/* Form Styling */
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.custom-form nz-form-item {
+  width: 100%;
+}
+
+/* Scrollable Container */
+.activity-scroll-container,
+.income-scroll-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* Custom scrollbar */
+.activity-scroll-container::-webkit-scrollbar,
+.income-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-scroll-container::-webkit-scrollbar-track,
+.income-scroll-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.activity-scroll-container::-webkit-scrollbar-thumb,
+.income-scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+.activity-scroll-container::-webkit-scrollbar-thumb:hover,
+.income-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Activity & Workout Item Styles */
+.activity-item,
+.workout-item {
+  background: #fafafa;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.activity-item:hover,
+.workout-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Goal Details */
+.goal-details {
+  font-size: 14px;
+  line-height: 1.6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Icon Styling */
+.update-status-icon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.update-status-icon:hover {
+  color: #3cb371;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .goal-details {
+      flex-direction: column;
+  }
+}

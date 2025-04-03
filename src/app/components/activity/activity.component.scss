@@ -1,0 +1,107 @@
+/* activity.component.scss */
+:host {
+    display: block;
+    padding: 16px;
+  }
+  
+  .custom-form {
+    .ant-form-item {
+      margin-bottom: 16px;
+    }
+  
+    button {
+      margin-top: 16px;
+      width: 100%;
+    }
+  }
+  
+  .custom-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  
+    .ant-card-head {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  
+    .ant-card-body {
+      padding: 16px;
+    }
+  
+    .activity-scroll-container {
+      max-height: 400px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-right: 8px;
+  
+      /* Custom scrollbar styling */
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+  
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+  
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+  
+    .activity-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+      width: 100%; /* Ensure it takes full width */
+      transition: all 0.3s; /* Smooth transition for hover effect */
+  
+      &:last-child {
+        border-bottom: none;
+      }
+  
+      &:hover {
+        background-color: #f5f5f5; /* Background applied to entire row */
+        cursor: pointer; /* Indicate interactivity */
+      }
+  
+      .activity-details {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+        color: #333;
+        flex-wrap: nowrap; /* Keep items on one line */
+        white-space: nowrap; /* Prevent text wrapping */
+        width: 100%; /* Ensure it spans full width */
+  
+        span {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .activity-details {
+      gap: 5px;
+      font-size: 13px;
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      white-space: normal; /* Allow text wrapping on smaller screens */
+    }
+  
+    .custom-form button {
+      width: 100%;
+    }
+  
+    nz-col {
+      width: 100%;
+    }
+  
+    .activity-item {
+      padding: 8px 0;
+    }
+  }

@@ -1,0 +1,39 @@
+<!-- Updated dashboard.component.html -->
+<div class="dashboard-container">
+  <div class="stats-row">
+    <div class="stat-card">
+      Calories: <span style="color: slateblue">{{statsData.totalCaloriesBurned}} cal</span>
+    </div>
+    <div class="stat-card">
+      Distance: <span style="color: green">{{statsData.distance | number:'1.1-1'}} km</span>
+    </div>
+    <div class="stat-card">
+      Steps: <span style="color: red">{{statsData.steps}}</span>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      Time: <span style="color: red">{{statsData.duration}}</span>
+    </div>
+    <div class="stat-card">
+      Achieved: <span style="color: green">{{statsData.achievedGoals}}</span>
+    </div>
+    <div class="stat-card">
+      Not Achieved: <span style="color: red">{{statsData.notAchievedGoals}}</span>
+    </div>
+  </div>
+
+  <div class="charts-container">
+    <nz-card class="chart-card" nzType="inner" nzTitle="Recent Activities">
+      <div class="chart-wrapper">
+        <canvas #workoutLineChart></canvas>
+      </div>
+    </nz-card>
+    <nz-card class="chart-card" nzType="inner" nzTitle="Recent Workouts">
+      <div class="chart-wrapper">
+        <canvas #activityLineChart></canvas>
+      </div>
+    </nz-card>
+  </div>
+</div>

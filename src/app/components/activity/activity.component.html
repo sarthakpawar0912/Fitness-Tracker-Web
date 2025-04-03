@@ -1,0 +1,55 @@
+<!-- activity.component.html -->
+<div nz-row [nzGutter]="16">
+  <!-- Post Activity Form -->
+  <div nz-col nzXs="24" nzSm="24" nzMd="10" nzLg="8">
+    <nz-card nzType="inner" [nzTitle]="'Post New Activity'" class="custom-card">
+      <form nz-form [formGroup]="activityForm" class="custom-form" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input the calories!">
+            <input type="number" nz-input formControlName="caloriesBurned" placeholder="Enter calories burned">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input the distance!">
+            <input type="number" nz-input formControlName="distance" placeholder="Enter distance (km)">
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input the date!">
+            <nz-date-picker style="width: 100%;" formControlName="date"></nz-date-picker>
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input the steps!">
+            <input type="number" nz-input formControlName="steps" placeholder="Enter steps">
+          </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button nzType="primary" nzBlock [disabled]="activityForm.invalid">
+          Post Activity
+        </button>
+      </form>
+    </nz-card>
+  </div>
+
+  <!-- Past Activities -->
+  <div nz-col nzXs="24" nzSm="24" nzMd="14" nzLg="16">
+    <nz-card nzType="inner" nzTitle="Past Activities" class="custom-card">
+      <div class="activity-scroll-container">
+        <div nz-card-grid *ngFor="let activity of activities" class="activity-item">
+          <div nz-row>
+            <div nz-col nzSpan="24" class="activity-details"> <!-- Changed nzSpan to 24 for full width -->
+              <span><strong>Calories:</strong> {{ activity.caloriesBurned }}</span> |
+              <span><strong>Distance:</strong> {{ activity.distance }} km</span> |
+              <span><strong>Steps:</strong> {{ activity.steps }}</span> |
+              <span><strong>Date:</strong> {{ activity.date | date }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nz-card>
+  </div>
+</div>

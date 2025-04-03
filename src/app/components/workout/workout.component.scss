@@ -1,0 +1,58 @@
+/* General Styles */
+.custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  nz-form-item {
+    width: 100%;
+  }
+  
+  nz-input,
+  nz-date-picker,
+  nz-select {
+    width: 100% !important;
+  }
+  
+  button[w-100] {
+    width: 100%;
+  }
+  
+  /* Past Workouts Scrollable Container */
+  .income-scroll-container {
+    max-height: 300px; /* Set max height for scrolling */
+    overflow-y: auto;
+    padding-right: 5px;
+  }
+  
+  .income-scroll-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .income-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+  }
+  
+  .income-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Workout Item Styling */
+  .workout-item {
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .workout-item strong {
+    color: #333;
+  }
+  
+  .workout-item span {
+    font-size: 14px;
+  }
+  

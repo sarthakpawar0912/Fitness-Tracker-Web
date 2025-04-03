@@ -1,0 +1,60 @@
+<div nz-row [nzGutter]="16">
+    <!-- Post Goal Form -->
+    <div nz-col nzXs="24" nzSm="24" nzMd="10" nzLg="8">
+      <nz-card nzType="inner" [nzTitle]="'Post New Goal'" class="custom-card">
+        <form nz-form [formGroup]="goalForm" class="custom-form" (ngSubmit)="submitForm()">
+         
+            <nz-form-item nz-col nzSpan="23">
+                <nz-form-control nzErrorTip="Please input the description">
+                  <textarea nz-input placeholder="Enter description" 
+                            [nzAutosize]="{minRows: 2, maxRows: 4}" 
+                            formControlName="description">
+                  </textarea>
+                </nz-form-control>
+              </nz-form-item>
+  
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input the start date!">
+              <nz-date-picker style="width: 100%;" formControlName="startDate"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Please input the end date!">
+              <nz-date-picker style="width: 100%;" formControlName="endDate"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+  
+          <button nz-button nzType="primary" nzBlock [disabled]="goalForm.invalid">
+            Post Goal
+          </button>
+        </form>
+      </nz-card>
+    </div>
+
+    <!-- Past Goals -->
+    <div nz-col nzXs="24" nzSm="24" nzMd="14" nzLg="16">
+      <nz-card nzType="inner" nzTitle="Past Goals" class="custom-card">
+        <div class="activity-scroll-container">
+          <div *ngFor="let goal of goals" class="activity-item">
+            <div nz-row>
+              <div nz-col nzSpan="24" class="goal-details">
+                <span><strong>Description:</strong> {{ goal.description }}</span> |
+                <span><strong>Start Date:</strong> {{ goal.startDate | date }} </span> |
+                <span><strong>End Date:</strong> {{ goal.endDate | date }}</span> |
+                <span><strong>Achieved:</strong> {{ goal.achieved }}</span>
+
+                <span *ngIf="!goal.achieved && goal.id" 
+                      (click)="updateStatus(goal.id)" 
+                      nz-icon [nzType]="'check-circle'"
+                      [nzTheme]="'twotone'" 
+                      [nzTwotoneColor]="'#53c41a'" 
+                      class="update-status-icon">
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nz-card>
+    </div>
+</div>
