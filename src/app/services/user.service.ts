@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+
 const BASIC_URL = "http://localhost:8080/";
 
 @Injectable({
@@ -18,7 +19,6 @@ export class UserService {
     return this.http.get(BASIC_URL + "api/activities");
   }
 
-  
   postWorkout(workoutDTO: any): Observable<any> {
     return this.http.post(BASIC_URL + "api/workout", workoutDTO);
   }
@@ -46,4 +46,5 @@ export class UserService {
   getGraphStats(): Observable<any> {
     return this.http.get(BASIC_URL + "api/graphs");
   }
+  
 }
