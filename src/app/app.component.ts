@@ -19,5 +19,6 @@ import { SharedModule } from './shared/shared.module';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+ 
   isCollapsed = false;
 }
