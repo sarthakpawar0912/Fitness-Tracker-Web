@@ -79,5 +79,4 @@ export class ActivityComponent implements OnInit {
     );
   }
 
-  
 }
