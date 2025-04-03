@@ -27,6 +27,7 @@ import { UserService } from '../../services/user.service';
   templateUrl: './activity.component.html',
   styleUrls: ['./activity.component.scss']
 })
+
 export class ActivityComponent implements OnInit {
   
    
