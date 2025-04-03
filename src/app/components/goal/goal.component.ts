@@ -25,8 +25,7 @@ import { SharedModule } from '../../shared/shared.module';
   styleUrl: './goal.component.scss'
 })
 export class GoalComponent {
-
-     
+   
   goalForm!: FormGroup;
   goals: any[] = []; // Ensures it's an array to prevent errors
 
@@ -51,7 +50,6 @@ export class GoalComponent {
       this.message.error('Please fill all fields correctly!', { nzDuration: 5000 });
       return;
     }
-
     this.goalService.postGoal(this.goalForm.value).subscribe(
       res => {
         this.message.success('Goal Posted Successfully', { nzDuration: 5000 });
@@ -80,7 +78,6 @@ export class GoalComponent {
       this.message.error('Invalid Goal ID', { nzDuration: 5000 });
       return;
     }
-
     this.goalService.updateGoalStatus(id).subscribe(
       res => {
         this.message.success('Goal Updated Successfully', { nzDuration: 5000 });
@@ -92,4 +89,5 @@ export class GoalComponent {
       }
     );
   }
+
 }
