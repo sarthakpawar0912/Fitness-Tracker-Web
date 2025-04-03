@@ -29,7 +29,6 @@ import { UserService } from '../../services/user.service';
 })
 
 export class ActivityComponent implements OnInit {
-  
    
   activityForm!: FormGroup;
   activities: any[] = [];
