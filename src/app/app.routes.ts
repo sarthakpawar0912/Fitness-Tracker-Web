@@ -7,14 +7,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 export const routes: Routes = [
   
 { path: 'activity',component:ActivityComponent},
-
 { path: 'workout',component:WorkoutComponent},
-
 { path: 'goal',component:GoalComponent},
-
 { path: 'dashboard',component:DashboardComponent},
-
 { path: '',component:DashboardComponent},
-
 ];
 
