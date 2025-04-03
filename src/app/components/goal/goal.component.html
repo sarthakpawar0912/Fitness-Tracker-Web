@@ -3,7 +3,6 @@
     <div nz-col nzXs="24" nzSm="24" nzMd="10" nzLg="8">
       <nz-card nzType="inner" [nzTitle]="'Post New Goal'" class="custom-card">
         <form nz-form [formGroup]="goalForm" class="custom-form" (ngSubmit)="submitForm()">
-         
             <nz-form-item nz-col nzSpan="23">
                 <nz-form-control nzErrorTip="Please input the description">
                   <textarea nz-input placeholder="Enter description" 
@@ -32,7 +31,6 @@
       </nz-card>
     </div>
 
-    <!-- Past Goals -->
     <div nz-col nzXs="24" nzSm="24" nzMd="14" nzLg="16">
       <nz-card nzType="inner" nzTitle="Past Goals" class="custom-card">
         <div class="activity-scroll-container">
