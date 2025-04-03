@@ -8,7 +8,6 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { BrowserModule } from '@angular/platform-browser';
 import { UserService } from '../../services/user.service';
 
 @Component({
