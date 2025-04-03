@@ -79,15 +79,5 @@ export class ActivityComponent implements OnInit {
     );
   }
 
-  // deleteActivity(id: number): void {
-  //   this.activityService.deleteActivity(id).subscribe(
-  //     res => {
-  //       this.message.success('Activity deleted successfully', { nzDuration: 5000 });
-  //       this.getAllActivities();
-  //     },
-  //     error => {
-  //       this.message.error('Error while deleting Activity', { nzDuration: 5000 });
-  //     }
-  //   );
-  // }
+  
 }
