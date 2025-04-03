@@ -26,7 +26,6 @@ import { SharedModule } from '../../shared/shared.module';
 })
 export class WorkoutComponent {
 
-
   workoutForm!:FormGroup;
 
   listOfType:any[]=[
@@ -49,10 +48,9 @@ export class WorkoutComponent {
     "Climbing",
     "Polymetrics"
   ];
-
-  
-activities: any;
-workouts:any;
+ 
+  activities: any;
+  workouts:any;
 
   constructor(private fb:FormBuilder,
     private userService:UserService,
@@ -60,13 +58,13 @@ workouts:any;
   ){}
 
   ngOnInit(){
-this.workoutForm=this.fb.group({
-  type:[null,[Validators.required]],
-  duration:[null,[Validators.required]],
-  date:[null,[Validators.required]],
-  caloriesBurned:[null,[Validators.required]],
-});
-this.getAllWorkouts();
+    this.workoutForm=this.fb.group({
+      type:[null,[Validators.required]],
+      duration:[null,[Validators.required]],
+      date:[null,[Validators.required]],
+      caloriesBurned:[null,[Validators.required]],
+    });
+    this.getAllWorkouts();
   }
 
   onSubmit(){
@@ -76,7 +74,6 @@ this.getAllWorkouts();
     },error=>{
       this.message.error("Error while posting workout",{nzDuration:5000});
     })
-   
   }
 
   getAllWorkouts(): void {
@@ -90,6 +87,5 @@ this.getAllWorkouts();
       }
     );
   }
-
 
 }
