@@ -7,7 +7,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { BrowserModule } from '@angular/platform-browser';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NzFormModule } from 'ng-zorro-antd/form';
@@ -28,7 +27,6 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
     NzIconModule,
     NzLayoutModule,
     NzMenuModule,
-    
     NzCardModule,
     NzFormModule,  // ✅ Ensure this is imported
     NzButtonModule,
